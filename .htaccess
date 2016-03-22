@@ -1,0 +1,6 @@
+RewriteEngine On
+#RewriteBase /ci-scsc-inc/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule "^/ci-scsc-inc$" "/ci-scsc-inc/site/index"
+RewriteRule ^(.*)$ index.php/$1 [L]
